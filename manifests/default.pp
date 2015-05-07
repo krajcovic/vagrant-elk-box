@@ -56,7 +56,7 @@ class { 'logstash':
   require      => [ Class['java'], Class['elasticsearch'] ],
 }
 
-file { '/etc/logstash/conf.d/logstash':
+file { '/etc/logstash/conf.d/logstash.conf':
   ensure  => '/vagrant/confs/logstash/logstash.conf',
   require => [ Class['logstash'] ],
 }
