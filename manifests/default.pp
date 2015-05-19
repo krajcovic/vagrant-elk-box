@@ -47,6 +47,18 @@ elasticsearch::plugin{'royrusso/elasticsearch-HQ':
   instances  => 'es-01'
 }
 
+# In simple words bigdesk makes it very easy to see how your Elasticsearch cluster is doing. Just install it as an Elasticsearch plugin, download locally or run online from the web, then point it to the Elasticsearch node REST endpoint and have fun.
+elasticsearch::plugin{'lukas-vlcek/bigdesk/2.4.0':
+  module_dir => 'HQ',
+  instances  => 'es-01'
+}
+
+# elasticsearch-head is a web front end for browsing and interacting with an Elastic Search cluster.
+elasticsearch::plugin{'mobz/elasticsearch-head':
+  module_dir => 'HQ',
+  instances  => 'es-01'
+}
+
 # Logstash
 class { 'logstash':
   # autoupgrade  => true,

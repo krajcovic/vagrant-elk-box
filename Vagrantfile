@@ -60,5 +60,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell", inline: $script
-  config.vm.provision "puppet", manifests_path: "manifests", manifest_file: "default.pp"
+  config.vm.provision "puppet", manifests_path: "manifests", manifest_file: "default.pp" 
 end
